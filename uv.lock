@@ -3997,6 +3997,25 @@ wheels = [
 ]
 
 [[package]]
+name = "lance-ray"
+version = "0.4.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "lance-namespace" },
+    { name = "more-itertools", marker = "python_full_version < '3.12'" },
+    { name = "packaging" },
+    { name = "pyarrow" },
+    { name = "pylance" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "ray", extra = ["data"] },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3f/6d/5d7047d6680bb71e5f1d83342fb58c6b7b376ea8ba30142fe9771d2d657f/lance_ray-0.4.2.tar.gz", hash = "sha256:c1d32ca787b29e1efc41d68d5802ead6229371e680d7135fa52f2f4f2f011d0c", size = 60459, upload-time = "2026-05-12T03:37:32.619Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/2c/b8/4b993529f2d5d90a30ab9373254081723b9ad9e2caa9bd359b78a34f7243/lance_ray-0.4.2-py3-none-any.whl", hash = "sha256:aed853718177783a371788fba4a0bfd84621ae577665f1fc9c359fc4a541863e", size = 42869, upload-time = "2026-05-12T03:37:31.502Z" },
+]
+
+[[package]]
 name = "lark"
 version = "1.2.2"
 source = { registry = "https://pypi.org/simple" }
@@ -5101,6 +5120,7 @@ all = [
     { name = "gpustat" },
     { name = "iso639-lang" },
     { name = "justext" },
+    { name = "lance-ray" },
     { name = "librosa" },
     { name = "lxml" },
     { name = "matplotlib" },
@@ -5279,6 +5299,7 @@ interleaved-cuda12 = [
     { name = "vllm", marker = "platform_machine == 'x86_64' and sys_platform != 'darwin'" },
 ]
 lance = [
+    { name = "lance-ray" },
     { name = "pylance" },
 ]
 math-cpu = [
@@ -5522,6 +5543,7 @@ requires-dist = [
     { name = "iso639-lang", marker = "extra == 'translation-common'", specifier = ">=2.6.0" },
     { name = "jieba", specifier = "==0.42.1" },
     { name = "justext", marker = "extra == 'text-cpu'" },
+    { name = "lance-ray", marker = "extra == 'lance'", specifier = ">=0.4" },
     { name = "librosa", marker = "extra == 'audio-common'" },
     { name = "lmdb", specifier = ">=1.4" },
     { name = "loguru" },

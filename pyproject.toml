@@ -212,7 +212,10 @@ text_cpu = [
     "sentence-transformers",
 ]
 
-lance = ["pylance>=7"]
+lance = [
+    "lance-ray>=0.4",
+    "pylance>=7",
+]
 
 text_cuda12 = [
     "nemo_curator[cuda12]",
